@@ -7,7 +7,7 @@
   "Checks if character is lowercase."
   [^Character c]
   (let [char (int c)]
-    (if (and (< (first lowercase-range) char) (< char (last lowercase-range)))
+    (if (and (<= (first lowercase-range) char) (<= char (last lowercase-range)))
       true
       false)))
 
