@@ -15,7 +15,7 @@
   "Checks if character is uppercase."
   [^Character c]
   (let [char (int c)]
-    (if (and (< (first uppercase-range) char) (< char (last uppercase-range)))
+    (if (and (<= (first uppercase-range) char) (<= char (last uppercase-range)))
       true
       false)))
 
